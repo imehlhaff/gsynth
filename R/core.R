@@ -2153,7 +2153,7 @@ synth.boot<-function(Y,
     if (inference %in% c("nonparametric", "jackknife")) { ## nonparametric bootstrap
 
         if (inference == "nonparametric") {
-            cat("\rBootstrapping ...\n")
+            cat("\rBootstrapping 1 ...\n")
         } else {
             cat("\r Jackknifing ...\n")
         }
@@ -2760,7 +2760,7 @@ synth.boot<-function(Y,
         } # the end of the EM case
 
         ## computing
-        cat("\rBootstrapping ...\n")
+        cat("\rBootstrapping 2 ...\n")
         if (parallel == TRUE) { 
             boot.out <- foreach(k=1:nboots,
                                 .inorder = FALSE,
