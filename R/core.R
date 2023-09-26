@@ -1887,7 +1887,7 @@ synth.mc<-function(Y, # Outcome variable, (T*N) matrix
             est.best$alpha <- est.best$alpha * norm.para[1]
         }
         if (force%in%c(2,3)) {
-            est$xi <- est$xi * norm.para[1]
+            est.best$xi <- est.best$xi * norm.para[1]
             xi <- xi * norm.para[1]
         }
 
