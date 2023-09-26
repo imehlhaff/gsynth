@@ -55,6 +55,7 @@ synth.core<-function(Y, # Outcome variable, (T*N) matrix
     Nco <- N - Ntr
     ## careful: only valid for balanced panel
     T0 <- apply(pre, 2, sum) 
+    print("line 58")
     T0.min <- min(T0)
     sameT0 <- length(unique(T0)) == 1 ## treatment kicks in at the same time 
                                       ## unbalanced case needs more conditions
@@ -837,6 +838,7 @@ synth.em<-function(Y, # Outcome variable, (T*N) matrix
     Nco <- N - Ntr
     ## careful: only valid for balanced panel
     T0 <- apply(pre, 2, sum) 
+    print("line 841")
     T0.min <- min(T0)
     sameT0 <- length(unique(T0)) == 1 ## treatment kicks in at the same time 
 
@@ -1327,6 +1329,7 @@ synth.em.cv<-function(Y,  # Outcome variable, (T*N) matrix
     Nco<-N-Ntr
     ## careful: only valid for balanced panel
     T0<-apply(pre,2,sum) 
+    print("line 1332")
     T0.min<-min(T0)
     sameT0<-length(unique(T0))==1 ## treatment kicks in at the same time 
     
@@ -1526,6 +1529,7 @@ synth.mc<-function(Y, # Outcome variable, (T*N) matrix
     Nco <- N - Ntr
     ## careful: only valid for balanced panel
     T0 <- apply(pre, 2, sum) 
+    print("line 1532")
     T0.min <- min(T0)
     sameT0 <- length(unique(T0)) == 1 ## treatment kicks in at the same time 
                                       ## unbalanced case needs more conditions
@@ -2029,6 +2033,7 @@ synth.boot<-function(Y,
     Ntr <- sum(tr)
     Nco <- N - Ntr
     T0 <- apply(pre, 2, sum) 
+    print("line 2036")
     T0.min <- min(T0)
     sameT0 <- length(unique(T0)) == 1 ## treatment kicks in at the same time
 
